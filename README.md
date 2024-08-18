@@ -1,7 +1,7 @@
-LinkDefense
+# LinkDefense
 LinkDefense is a lightweight JavaScript tool designed to scan and flag suspicious URLs on a webpage. It helps detect potentially harmful links based on various heuristics, including suspicious TLDs, typosquatting, URL IP addresses, etc. The tool is particularly useful for enhancing web security by alerting users to potentially malicious links before they interact with them.
 
-Features
+# Features
 Whitelist Trusted Domains: Ensure well-known, legitimate domains are never flagged as suspicious.
 Suspicious TLD Detection: Flag URLs with suspicious top-level domains (TLDs) such as .xyz, .top, and more.
 Typosquatting Detection: Identify URLs that closely resemble legitimate domains using Levenshtein distance.
@@ -13,7 +13,7 @@ Protocol Handling: Properly sanitize and check URLs, even if they are missing th
 
 
 
-Test Cases
+# Test Cases
 LinkDefense includes a suite of test cases to validate its functionality. Below are some of the key test cases:
 
 Valid Legitimate Domain: Ensure that legitimate domains are not marked as suspicious.
