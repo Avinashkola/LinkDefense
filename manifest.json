@@ -1,18 +1,29 @@
 {
   "manifest_version": 3,
-  "name": "URL Checker",
+  "name": "LinkDefense",
   "version": "1.0",
-  "permissions": [ "activeTab", "webNavigation", "storage", "tabs" ],
-  "background": {
-    "service_worker": "background.js"
+  "description": "A Chrome extension that checks for malicious URLs and flags them based on various criteria.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "images/icon.png"
   },
+  "icons": {
+    "128": "images/icon.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [ "top-1m.csv" ],
+      "matches": [ "<all_urls>" ]
+    }
+  ],
   "content_scripts": [
     {
       "matches": [ "<all_urls>" ],
       "js": [ "content.js" ]
     }
-  ],
-  "action": {
-    "default_popup": "popup.html"
-  }
+  ]
 }
